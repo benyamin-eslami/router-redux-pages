@@ -19,12 +19,34 @@ const NewLists = () => {
   };
   return (
     <Fragment>
-      <form onSubmit={addHandler}>
-        <label htmlFor="firstname">firstname</label>
-        <input ref={firstName} id="firstname" />
-        <label htmlFor="lastname">lastname</label>
-        <input ref={lastName} id="lastname" />
-        <button type="submit">add</button>
+      <form className="m-5" onSubmit={addHandler}>
+        <div className="mb-3">
+          <label htmlFor="firstname" className="form-label">
+            Firstname
+          </label>
+          <input
+            ref={firstName}
+            type="text"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="lastName" className="form-label">
+            lastName
+          </label>
+          <input
+            ref={lastName}
+            type="text"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+
+        <button type="submit" className="btn btn-primary">
+          add
+        </button>
       </form>
     </Fragment>
   );

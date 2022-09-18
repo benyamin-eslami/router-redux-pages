@@ -22,18 +22,64 @@ const Settings = () => {
   };
   return (
     <Fragment>
-      <select onChange={colorThemeHandler}>
-        <option value="dark">dark</option>
-        <option value="light">light</option>
-      </select>
-      <label htmlFor="footer">footer txt</label>
-      <input onChange={footerHandler} id="footer" type="text" />
-      <label htmlFor="header">header txt</label>
-      <input onChange={headerHandler} id="header" type="text" />
-      <label htmlFor="darkColor">dark color</label>
-      <input onChange={darkColorHandler} id="darkColor" type="text" />
-      <label htmlFor="lightColor">light color</label>
-      <input onChange={lightColorHandler} id="lightColor" type="text" />
+      <div className="m-5">
+        color scheme
+        <select
+          onChange={colorThemeHandler}
+          class="  mb-4 form-select"
+          aria-label="Disabled select example"
+        >
+          <option value="light">light</option>
+          <option selected value="dark">
+            dark
+          </option>
+        </select>
+        <div className=" mb-4 mb-3">
+          <label htmlFor="footerTxt" className="form-label">
+            Footer Txt
+          </label>
+          <input
+            onChange={footerHandler}
+            type="text"
+            className="form-control"
+            id="footerTxt"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="headerTxt" className="form-label">
+            header Txt
+          </label>
+          <input
+            onChange={headerHandler}
+            type="text"
+            className="form-control"
+            id="headerTxt"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="darkColor" className="form-label">
+            darkColor
+          </label>
+          <input
+            onChange={darkColorHandler}
+            type="text"
+            className="form-control"
+            id="darkColor"
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="lightColor" className="form-label">
+            lightColor
+          </label>
+          <input
+            onChange={lightColorHandler}
+            type="text"
+            className="form-control"
+            id="lightColor"
+          />
+        </div>
+      </div>
     </Fragment>
   );
 };

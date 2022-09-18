@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialSettingState = {
-  isDarkMode: false,
+  isDarkMode: true,
   colors: { darkColor: "none", lightColor: "none" },
   headerTxt: "website",
   footerTxt: "2022",

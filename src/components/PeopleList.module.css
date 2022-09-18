@@ -1,0 +1,36 @@
+.itemWrapper {
+  background-color: rgb(170, 240, 216);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0.7rem 0;
+  align-items: center;
+  background-color: yellowgreen;
+  padding: 1rem;
+}
+.badge {
+  background-color: red;
+  border-radius: 3px;
+  padding: 1rem;
+  color: white;
+}
+.text {
+  background-color: white;
+  padding: 1rem;
+}
+.link {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 100%;
+  padding: 1rem;
+}

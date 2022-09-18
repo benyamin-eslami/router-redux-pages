@@ -1,6 +1,6 @@
 import Settings from "./components/Settings";
 import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import EditList from "./components/EditList";
 import NewLists from "./components/NewList";
 import PeopleLists from "./components/PeopleLists";
@@ -11,8 +11,7 @@ function App() {
   const isDarkMode = useSelector((state) => state.settings.isDarkMode);
   const darkColor = useSelector((state) => state.settings.colors.darkColor);
   const lightColor = useSelector((state) => state.settings.colors.lightColor);
-  console.log(isDarkMode);
-  console.log(darkColor);
+
   return (
     <Fragment>
       <div
@@ -24,6 +23,7 @@ function App() {
             <Route path="/lists/:listId" element={<EditList />} />
             <Route path="/add" element={<NewLists />} />
             <Route path="/setting" element={<Settings />} />
+            <Route path="*" element={<Navigate to="/lists" replace />} />
           </Routes>
         </Layout>
       </div>

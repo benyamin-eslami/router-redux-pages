@@ -5,9 +5,18 @@ import Header from "../Header";
 const Layout = (props) => {
   return (
     <Fragment>
-      <Header />
-      {props.children}
-      <Footer />
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Header />
+        {props.children}
+        <Footer />
+      </div>
     </Fragment>
   );
 };
