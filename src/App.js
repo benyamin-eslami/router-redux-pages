@@ -6,6 +6,9 @@ import NewLists from "./components/NewList";
 import PeopleLists from "./components/PeopleLists";
 import Layout from "./components/UI/Layout";
 import { useSelector } from "react-redux";
+import Login from "./components/Login";
+import UserPanel from "./components/UserPanel";
+import AdminPanel from "./components/AdminPanel";
 
 function App() {
   const isDarkMode = useSelector((state) => state.settings.isDarkMode);
@@ -23,7 +26,11 @@ function App() {
             <Route path="/lists/:listId" element={<EditList />} />
             <Route path="/add" element={<NewLists />} />
             <Route path="/setting" element={<Settings />} />
-            <Route path="*" element={<Navigate to="/lists" replace />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/userpanel" element={<UserPanel />} />
+            <Route path="/adminpanel" element={<AdminPanel />} />
+
+            <Route path="*" element={<Navigate to="/login" replace />} />
           </Routes>
         </Layout>
       </div>
